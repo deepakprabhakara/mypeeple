@@ -1,0 +1,8 @@
+<resources>
+
+    <string-array name="event_type">
+        <item>@string/enter</item>
+        <item>@string/leave</item>
+    </string-array>
+    
+</resources>

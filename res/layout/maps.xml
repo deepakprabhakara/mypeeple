@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<com.google.android.maps.MapView
+		android:id="@+id/mapView" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:enabled="true"
+		android:clickable="true" android:apiKey="0PXY8ZMvmkXNO5e_NotmEi70Lysz8rlOhPoSgTA" />
+        
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="#000000"
+		android:padding="2px">
+		<ToggleButton android:id="@+id/satelliteButton"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:padding="-2px"
+			android:textOn="@string/satellite" android:textOff="@string/map" />
+		<EditText android:id="@+id/placeText" android:layout_width="fill_parent"
+			android:layout_toLeftOf="@+id/satelliteButton"
+			android:layout_height="wrap_content" />
+	    <Button
+	        android:id="@+id/doneButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/satelliteButton"
+	        android:layout_alignParentRight="true"
+	        android:padding="-2px"
+	        android:text="@string/done" />
+	    <Button
+	    	android:id="@+id/cancelButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@+id/doneButton"
+	        android:layout_alignTop="@+id/doneButton"
+	        android:text="@string/cancel" />
+		<TextView
+			android:id="@+id/addressTextView"
+			android:editable="true"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_toLeftOf="@+id/cancelButton"
+		    android:layout_alignTop="@+id/doneButton"
+		    android:textStyle="bold"
+		    android:textSize="15px"
+		    android:text="" />
+	</RelativeLayout>	
+</FrameLayout>

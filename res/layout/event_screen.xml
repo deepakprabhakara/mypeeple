@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:padding="10px">
+
+	<TextView android:id="@+id/eventLabel" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/event_label" />
+
+	<EditText android:id="@+id/eventText" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@id/eventLabel" />
+
+	<TextView android:id="@+id/typeLabel" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@+id/eventText"
+		android:text="@string/type_label" />
+
+	<Spinner android:id="@+id/typeSpinner" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@+id/typeLabel"
+		android:drawSelectorOnTop="true" android:prompt="@string/type_label" />
+
+	<TextView android:id="@+id/placeLabel" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@+id/typeSpinner"
+		android:text="@string/place_label" />
+
+	<Spinner android:id="@+id/placeSpinner" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@+id/placeLabel"
+		android:drawSelectorOnTop="true" android:prompt="@string/place_label" />
+
+	<Button android:id="@+id/doneButton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@+id/placeSpinner"
+		android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+		android:text="@string/done" />
+
+	<Button android:id="@+id/cancelButton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_toLeftOf="@+id/doneButton"
+		android:layout_alignTop="@+id/doneButton" android:text="@string/cancel" />
+</RelativeLayout>
